@@ -9,11 +9,20 @@
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
-
+<div class="container bg-primary d-flex justify-content-center">
+  <div class="row">
+    <div class="col">
+      <p>Hello</p>
+    </div>
+  </div>
+</div>
 <p>
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
 
+<% if @product.picture.attached? %>
+  <%= image_tag @product.picture %>
+<% end %>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
