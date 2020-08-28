@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
-gem 'activeadmin'
 gem 'bootstrap',  '~>4.3.1'
 #Amazon s3
 #gem 'aws-sdk-s3', require: false
