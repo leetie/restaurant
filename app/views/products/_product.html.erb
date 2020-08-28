@@ -1,0 +1,6 @@
+<% if product.picture.attached? %>
+  <%= image_tag product.picture.variant(resize_to_fit: [300,300]) %>
+<% end %><br>
+<strong><%= product.name %></strong><br>
+<%= product.description %><br>
+<%= number_to_currency(product.price)%></br>
