@@ -11,7 +11,7 @@ A restaurant app with admin facing CRUD controls for products. Built with Rails 
       echo "gem 'bootstrap' >> Gemfile"
       echo "gem 'aws-sdk-s3', require: false >> Gemfile"
       ```
-    * Uncomment `gem 'redis', '~> 4.0'` for use in production later
+    * Uncomment `gem 'redis', '~> 4.0'` for use in production later, as well as `gem 'image_processing'`
   * Add bootstrap, popper.js, and jquery with yarn
     * ```bash
       yarn add bootstrap popper.js jquery
@@ -30,6 +30,13 @@ A restaurant app with admin facing CRUD controls for products. Built with Rails 
     * ```bash
       rails g active_admin:resource product
       ```
+  * Add picture attachment to product.rb file
+    * `has_one_attached :picture, dependent: :destroy`
+  * Generate ActiveStorage Installation
+    * ```bash
+      rails active_storage:install
+      ```
   * Migrate DB
     * `rails db:migrate`
   * Uncomment permitted params in app/admin/products.rb
+  * 
